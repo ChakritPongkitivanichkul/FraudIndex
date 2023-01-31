@@ -6,7 +6,8 @@ Regarding Thai academic fraud in 2023, I would like to contribute a bit by intro
 - We start by counting how many connections between a person of interest and people who commit academic fraud.
 - The Fraud Index = number of connections - 1
 - For example, Alice has a paper with a person who commit academic fraud. Alice has 1 connection-> Alice has Fraud Index of 0
-- Bob has a paper with Alice. Bob has 2 connections -> Bob has Fraud Index of 1
+- Bob has a paper with Alice but does not have any paper with a person who commit academic fraud. Bob has 2 connections -> Bob has Fraud Index of 1
+- Charlie has a paper with Bob but does not have any paper with Alice nor a person who commit academic fraud. Charlie has 3 connections -> Charlie has Fraud Index of 2
 
 # Caveat
 - This metric CANNOT be solely used to accuse anyone.
