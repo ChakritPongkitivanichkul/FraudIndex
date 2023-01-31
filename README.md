@@ -14,13 +14,13 @@ Regarding Thai academic fraud in 2023, I would like to contribute a bit by intro
 
 # Requirement
 1. System: You need python with numpy + pandas package
-2. File: Exported data of a person of interest from Scopus --> Read how to export file below..
+2. File: Exported data of a person of interest from Scopus --> Read how to export the scopus file below..
 
 # How to run
 Using command:
 python distance.py scopus.csv
 
-# How to export file
+# How to export a scopus file
 1. Go to Scopus and search the person of interest
 2. Scroll down to the documents section and click at "Export all"
 3. The pop up screen (Export document settings) will appear, then choose CSV (Excel) and export
