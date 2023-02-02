@@ -1,8 +1,6 @@
 import numpy as np
 from sys import argv
 import pandas as pd
-# from pybliometrics.scopus import AbstractRetrieval
-# from pybliometrics.scopus import ScopusSearch
 import pickle
 
 ###############################################################################
@@ -39,11 +37,40 @@ def main():
 
 	userset = IDextract(argv[1])
 
-	Fsources = ['SC','WS','KJ'] #Suphat Chupradit, Wanich Suksatan, Kittisak Jermsittiparsert
+	Fsources = {'57211329338': "Chupradit, Supat", '57219950613': "Suksatan, Wanich", '57214268798': "Jermsittiparsert, Kittisak"}
+	Fsources.update({'57207627195': "Jastaniah, Samyah D."})
+	Fsources.update({'57203840418': "Hafsan, Hafsan"})
+	Fsources.update({'56299022800': "Tseng, Chengjui"})
+	Fsources.update({'57843305300': "Karim, Yasir Salam"})
+	Fsources.update({'57776927900': "Hamza, Mohammed Ubaid"})
+	Fsources.update({'57196369598': "Hameed, Noora M."})
+	Fsources.update({'57218904286': "Sura, Al Zubaidi"})
+	Fsources.update({'57871910500': "Almotlaq, Saif Sabbar Kemil"})
+	Fsources.update({'36629842700': "Yasin, Ghulam"})
+	Fsources.update({'57202042400': "Heri Iswanto, A."})
+	Fsources.update({'57865370900': "Dadras, Mahnaz"})
+	Fsources.update({'57967351200': "Chorehi, Mohammad Mansouri"})
+	#Fsources.update({'12808195300': "Nonlaopon, Kamsing", '16229703500': "Botmart, Thongchai", '54890645300': "Weera, Wajaree"})
+
+	print("#############################################################################")
+	print("#############################################################################")
+	print("#############################################################################")
+	print("########################      Start the searches    #########################")
+	print("#############################################################################")
+	print("#############################################################################")
+	print("#############################################################################")
 
 	for fname in Fsources:
 
-		layer1 = unpackdict(fname+'_layer1.pkl')
+		if fname in userset:
+
+			print("#############################################################################")
+			print("The Fraud Index = 0 (You have a paper with the culprits: {})".format(Fsources[fname]))
+			print("#############################################################################")
+
+			continue
+
+		layer1 = unpackdict('dict_data/'+fname+'_layer1.pkl')
 
 		intersectlayer1 = dict()
 
@@ -58,14 +85,14 @@ def main():
 		if len(intersectlayer1) != 0:
 
 			print("#############################################################################")
-			print("The Fraud Index = 1 (You have at least one common coauthor with the culprits: {})".format(fname))
+			print("The Fraud Index = 1 (You have at least one common coauthor with the culprits: {})".format(Fsources[fname]))
 			print("They are the following:")
 			print(intersectlayer1)
 			print("#############################################################################")
 
 			continue
 
-		layer2 = unpackdict(fname+'_layer2.pkl')
+		layer2 = unpackdict('dict_data/'+fname+'_layer2.pkl')
 
 		intersectlayer2 = dict()
 
@@ -80,12 +107,21 @@ def main():
 		if len(intersectlayer2) != 0:
 
 			print("#############################################################################")
-			print("The Fraud Index = 2 (You have at least one common coauthor with coauthor of the culprits: {})".format(fname))
+			print("The Fraud Index = 2 (You have at least one common coauthor with coauthor of the culprits: {})".format(Fsources[fname]))
 			print("They are the following:")
 			print(intersectlayer2)
 			print("#############################################################################")
 
 			continue
+
+	print("#############################################################################")
+	print("#############################################################################")
+	print("#############################################################################")
+	print("##########################      End of searches    ##########################")
+	print("#############################################################################")
+	print("#############################################################################")
+	print("#############################################################################")
+
 
 
 main()

@@ -65,4 +65,23 @@ def cascade(nameorid, level=3):
 ###############################################################################
 ###############################################################################
 
+def deeplayer(seed_dict):
+
+	leveldict = dict()
+
+	for s in seed_dict:
+
+		sdict = generatelist(int(s))
+
+		leveldict.update(sdict)
+
+	return(leveldict)
+
+
+
+
+
+
+
+
 

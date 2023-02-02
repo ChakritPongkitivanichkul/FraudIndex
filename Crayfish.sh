@@ -1,0 +1,12 @@
+python3 main.py 57207627195
+python3 main.py 57203840418
+python3 main.py 56299022800
+python3 main.py 57843305300
+python3 main.py 57776927900
+python3 main.py 57196369598
+python3 main.py 57218904286
+python3 main.py 57871910500
+python3 main.py 36629842700
+python3 main.py 57202042400
+python3 main.py 57865370900
+python3 main.py 57967351200
