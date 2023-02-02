@@ -1,6 +1,6 @@
 # FraudIndex
 Regarding Thai academic fraud in 2023, I would like to contribute a bit by introducing a metric which can be used to measure how many connections between a person of interest and people who commit academic fraud. 
-(Last updated data (connections to cases) is on 31 January 2023)
+(Last updated data (connections to cases) is on 2 February 2023)
 
 # Definition
 - We start by counting how many connections between a person of interest and people who commit academic fraud.
