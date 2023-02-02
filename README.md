@@ -26,3 +26,9 @@ python distance.py scopus.csv
 2. Scroll down to the documents section and click at "Export all"
 3. The pop up screen (Export document settings) will appear, then choose CSV (Excel) and export
 4. Put scopus.csv at the same directory of the code
+
+# Evidence
+https://www.scopus.com/authid/detail.uri?authorId=57211329338
+https://www.scopus.com/authid/detail.uri?authorId=57219950613
+https://www.scopus.com/authid/detail.uri?authorId=57214268798
+https://www.scopus.com/record/display.uri?eid=2-s2.0-85141999552&origin=resultslist&sort=plf-f
