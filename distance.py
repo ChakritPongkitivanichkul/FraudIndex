@@ -97,7 +97,8 @@ def main():
 			print("#############################################################################")
 			print("The Fraud Index = 1 (You have at least one common coauthor with the culprits: {})".format(Fsources[fname]))
 			print("They are the following:")
-			print(intersectlayer1)
+			for scid, name in intersectlayer1.items():
+				print(scid, ':', name)
 			print("#############################################################################")
 
 			continue
@@ -119,7 +120,8 @@ def main():
 			print("#############################################################################")
 			print("The Fraud Index = 2 (You have at least one common coauthor with coauthor of the culprits: {})".format(Fsources[fname]))
 			print("They are the following:")
-			print(intersectlayer2)
+			for scid, name in intersectlayer2.items():
+				print(scid, ':', name)
 			print("#############################################################################")
 
 			continue
